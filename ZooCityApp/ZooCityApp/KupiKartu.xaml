@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZooCityApp.KupiKartu"
+             IconImageSource="tickets.png"
+             BackgroundColor="#fff">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#ffd52c" Padding="24" CornerRadius="0">
+                <Label Text="Kupi kartu" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <TableView Intent="Settings">
+                <TableRoot>
+                    <TableSection Title="Vaši podaci" TextColor="#37a6c3">
+                        <EntryCell x:Name="imeEntry" Label="Ime:" Placeholder="Ime" LabelColor="#000"/>
+                        <EntryCell x:Name="prezimeEntry" Label="Prezime:" Placeholder="Prezime" LabelColor="#000"/>
+                        <EntryCell x:Name="emailEntry" Label="Email:" Placeholder="Email" Keyboard="Email" LabelColor="#000"/>
+                        <EntryCell x:Name="telEntry" Label="Broj telefona:" Placeholder="Broj telefona" Keyboard="Telephone" LabelColor="#000"/>
+                    </TableSection>
+                    <TableSection Title="Podaci za rezervaciju" TextColor="#37a6c3">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                                <Label Text="Broj karti za odrasle:" TextColor="#000" VerticalOptions="Center"/>
+                                <Stepper x:Name="odrasli" Increment="1" Minimum="0" Maximum="10" HorizontalOptions="Center" />
+                                <Label Text="{Binding Source={x:Reference odrasli}, Path=Value}" TextColor="#37a6c3" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                                <Label Text="Broj karti za djecu:" TextColor="#000" VerticalOptions="Center"/>
+                                <Stepper x:Name="djeca" Increment="1" Minimum="0" Maximum="10" HorizontalOptions="Center" />
+                                <Label Text="{Binding Source={x:Reference djeca}, Path=Value}" TextColor="#37a6c3" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Margin="10,0,0,0">
+                                <Label Text="Odaberite datum posjete:" TextColor="#000"/>
+                                <DatePicker x:Name="Posjeta" Format="dd.MM.yyyy" HeightRequest="100" TextColor="#000"/>
+                            </StackLayout>
+                        </ViewCell>
+
+                    </TableSection>
+                    <TableSection>
+                        <ViewCell>
+                            <Button Text="Kupi" Clicked="Button_Clicked"/>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

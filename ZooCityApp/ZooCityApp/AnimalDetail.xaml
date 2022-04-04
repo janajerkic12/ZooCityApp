@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZooCityApp.AnimalDetail"
+             BackgroundColor="#93c221">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding zivotinje}" RowHeight="500" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BackgroundColor="#fff" CornerRadius="20" Margin="20">
+                                <StackLayout HorizontalOptions="Center" >
+                                    <Image Source="{Binding slika}" HeightRequest="100"/>
+                                    <Label Text="{Binding nazivZivotinje}" TextColor="#000" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"/>
+                                    <StackLayout Orientation="Horizontal" Margin="0,10">
+                                        <Label Text="U našem Zoo vrtu poznatija kao: " TextColor="#000" VerticalTextAlignment="Center"/>
+                                        <Label Text="{Binding imeUZoo}" TextColor="#ffd52c" FontSize="Medium" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Margin="0,10">
+                                        <Label Text="Potiče sa: " TextColor="#000" VerticalOptions="Center"/>
+                                        <Label Text="{Binding poticeOd}" TextColor="#37a6c3" FontSize="Medium" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                    <Label Text="{Binding opis}" TextColor="#000" FontSize="Medium"/>
+                                    
+
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+

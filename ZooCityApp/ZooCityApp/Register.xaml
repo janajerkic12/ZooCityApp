@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZooCityApp.Register"
+             BackgroundColor="#37a6c3"
+             IconImageSource="zoo.png">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+            <Label HorizontalTextAlignment="Center" Text="Novi profil" FontAttributes="Bold" FontSize="40" TextColor="#fff" Margin="0,50,0,20"></Label>
+            <Frame BackgroundColor="White" CornerRadius="20" Margin="30,10">
+                <StackLayout>
+                    <Entry x:Name="entryImePrezime" Placeholder="Ime i prezime"></Entry>
+                    <Entry x:Name="entryEmail" Placeholder="Email"></Entry>
+                    <Entry x:Name="entrySifra" Placeholder="Password" IsPassword="True"></Entry>
+                    <Entry x:Name="entryPotvrdiSifru" Placeholder="Confirm password" IsPassword="True"></Entry>
+                </StackLayout>
+            </Frame>
+
+            <Button Text="Kreiraj" TextColor="#fff" FontSize="Medium" CornerRadius="20" BackgroundColor="#93c221" Margin="30,10" Clicked="Button_Clicked"/>
+
+            <Button Text="Nazad" TextColor="#fff" FontSize="Medium" CornerRadius="20" BackgroundColor="#ffd52c" Margin="30,10" Clicked="Button_Clicked_1"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             IconImageSource="avatar.png"
+             x:Class="ZooCityApp.HomePage"
+             BackgroundColor="#93c221">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Izaberite neku od opcija koje nudi ZooCity aplikacija:" HorizontalTextAlignment="Center" TextColor="#000" FontSize="Large" FontAttributes="Bold" Margin="0,20,0,10"/>
+                <Frame Margin="30" CornerRadius="20">
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                        <ImageButton Source="paw.png" HeightRequest="100" BackgroundColor="#fff" Clicked="ImageButton_Clicked"/>
+                        <Label Text="Istraži ZooCity" HorizontalTextAlignment="Center" TextColor="#000" FontAttributes="Bold" FontSize="Medium"/>
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="30" CornerRadius="20">
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                        <ImageButton Source="tickets.png" HeightRequest="100" BackgroundColor="#fff" Clicked="kupiKartuButton"/>
+                        <Label Text="Kupi kartu" HorizontalTextAlignment="Center" TextColor="#000" FontAttributes="Bold" FontSize="Medium"/>
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="30" CornerRadius="20">
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                        <ImageButton Source="map.png" HeightRequest="100" BackgroundColor="#fff" Clicked="Button_Clicked"/>
+                        <Label Text="Posjetite nas" HorizontalTextAlignment="Center" TextColor="#000" FontAttributes="Bold" FontSize="Medium"/>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

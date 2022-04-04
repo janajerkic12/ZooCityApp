@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZooCityApp.Login"
+             IconImageSource="tickets.png"
+             BackgroundColor="#37a6c3">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+            <Label Text="Prijava" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="40" TextColor="#fff"  HorizontalOptions="CenterAndExpand" Margin="0,50,0,20"/>
+            <Frame BackgroundColor="White" CornerRadius="20" Margin="30,10">
+                <StackLayout>
+                    <Entry x:Name="entryEmail" Placeholder="Email"  TextColor="Green"/>
+                    <Entry x:Name="entrySifra" Placeholder="Password" IsPassword="True"/>
+                </StackLayout>
+            </Frame>
+
+            <Button Text="Prijavi se" TextColor="#fff" FontSize="Medium"  CornerRadius="20" BackgroundColor="#93c221" Margin="30,10" Clicked="Button_Clicked"/>
+
+            <Button Text="Nazad" TextColor="#fff" FontSize="Medium" CornerRadius="20" BackgroundColor="#ffd52c" Margin="30,10" Clicked="Button_Clicked_1"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZooCityApp.MainPage"
+             BackgroundColor="#37a6c3">
+
+    <StackLayout>
+        <StackLayout Margin="0,100,0,0">
+            <Label Text="Dobrodošli u" FontSize="Small" TextColor="#000" HorizontalOptions="Center"/>
+            <Image Source="zoo.png" HeightRequest="100"/>
+            <Label Text="city" FontSize="48" TextColor="#fff" FontAttributes="Bold" CharacterSpacing="1" HorizontalOptions="Center"/>
+        </StackLayout>
+        <StackLayout Margin="0,120,0,0">
+            <Button Text="Prijava" TextTransform="None" BackgroundColor="#ffd52c" Margin="60,10" CornerRadius="30" TextColor="#fff" FontSize="Medium" Clicked="Button_Clicked"/>
+            <Button Text="Registracija" TextTransform="None" BackgroundColor="#ffd52c" Margin="60,10" CornerRadius="30" TextColor="#fff" FontSize="Medium" Clicked="Button_Clicked_1"/>
+            <Button Text="Nastavi kao gost" TextTransform="None" BackgroundColor="#93c221" Margin="60,10" CornerRadius="30" TextColor="#fff" FontSize="Medium" Clicked="Button_Clicked_2"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
